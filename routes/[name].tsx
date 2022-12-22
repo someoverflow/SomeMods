@@ -6,7 +6,7 @@ interface ModList {
   name: string;
   href: string;
   description: string;
-  updated: Date;
+  updated: string;
   download: string;
   mods: Mod[];
 }
@@ -18,15 +18,12 @@ interface Mod {
 
 export const handler: Handlers<ModList> = {
   GET(_req, ctx) {
-    let project;
-    console.log(file)
-    file.forEach((list) => {
-      if (list.href === ctx.params.name) project = list;
-    });
-    if (!project) {
-      return new Response("Project not found", { status: 404 });
+    for (let i = 0; i < file.length; i++) {
+      if (file[i].href === ctx.params.name)
+        return ctx.render(file[i])
     }
-    return ctx.render(project);
+
+    return new Response("Project not found", { status: 404 })
   },
 };
 
@@ -52,7 +49,7 @@ export default function Greet(props: PageProps<ModList>) {
               <p class="text-sm max-w-lg text-blue-200">
                 {props.data.mods.length} Mods
               </p>
-              
+
               <p class="text-sm max-w-lg text-gray-400 text-right">
                 {new Date(props.data.updated).toLocaleDateString()}
               </p>
