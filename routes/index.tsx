@@ -10,13 +10,8 @@ export default function Home() {
         <title>SomeModlist</title>
       </Head>
 
-      <main
-        class="w-screen h-screen bg-gradient-to-t
-        from-gray-800
-        to-gray-900
-        bg-gray-900 text-gray-50 p-20"
-      >
-        <div class="flex px-8 mb-20 justify-center rounded-xl">
+      <main class="w-screen min-h-screen bg-gradient-to-t from-gray-800 to-gray-900 bg-gray-900 text-gray-50 p-20">
+        <div class="flex mb-20 justify-center rounded-xl">
           <div class="space-y-4 text-center bg-gray-900 p-6 rounded-2xl shadow-2xl border-1 border-gray-800">
             <h1 class="text-4xl inline-block font-bold font-mono flex justify-center items-center">
               <IconListDetails />
