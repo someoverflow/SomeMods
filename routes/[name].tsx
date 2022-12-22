@@ -19,7 +19,7 @@ const lists: ModList[] = [
   {
     name: "Forest Adventure",
     href: "forest-adventure",
-    download: "#",
+    download: "https://repo.someworkflow.de/storage/mod_packs/forest-adventure.zip",
     description: "Projekt mit cAjott rund um Twilight Forest",
     updated: new Date("2022-12-21T22:38:44.206Z"),
     mods: [
